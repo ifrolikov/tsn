@@ -1,0 +1,30 @@
+Codeception PHP Testing Framework v2.3.7
+Powered by PHPUnit 6.4.4 by Sebastian Bergmann and contributors.
+
+[1mApi Tests (1) [22m-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- [35;1mUserCest:[39;22m Test create[31;1m✖[39;22m [35;1mUserCest:[39;22m Test create [32m(0.12s)[39m
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Time: 196 ms, Memory: 14.00MB
+
+There was 1 failure:
+
+---------
+1) [35;1mUserCest:[39;22m Test create
+[37;41;1m Test [39;49;22m tests/admin/UserCest.php:testCreate
+[37;41;1m Step [39;49;22m See response code is 403
+[37;41;1m Fail [39;49;22m Expected HTTP Status Code: 403 (Forbidden). Actual Status Code: 200 (OK)
+Failed asserting that 200 matches expected 403.
+[33m
+Scenario Steps:
+[39m
+[1m 5. $I->seeResponseCodeIs(403)[22m at [32mtests/admin/UserCest.php:63[39m
+ 4. $I->sendPOST("admin/user/create",{"email":"dino27@gmail.com","phone":"724.387.6302","password":"k?6(+X3HB;9U|`","first_name":"Marisol","second_name":"Tierra","father_name":"Jacquelyn"}) at [32mtests/admin/UserCest.php:62[39m
+ 3. $I->setHeader("accessToken","67b52f0e-90cd-392f-b448-fe5183dcd79b") at [32mtests/admin/UserCest.php:61[39m
+ 2. $I->seeResponseCodeIs(401) at [32mtests/admin/UserCest.php:59[39m
+ 1. $I->sendPOST("admin/user/create",{"email":"dino27@gmail.com","phone":"724.387.6302","password":"k?6(+X3HB;9U|`","first_name":"Marisol","second_name":"Tierra","father_name":"Jacquelyn"}) at [32mtests/admin/UserCest.php:58[39m
+
+
+[37;41mFAILURES![0m
+[37;41mTests: 1[0m[37;41m, Assertions: 2[0m[37;41m, Failures: 1[0m[37;41m.[0m
